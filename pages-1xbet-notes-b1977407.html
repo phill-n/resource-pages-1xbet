@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>索引与说明 · 1xbet</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #faf6f0;
+      font-family: 'Georgia', 'Times New Roman', 'Noto Serif SC', serif;
+      color: #2c2c2c;
+      line-height: 1.7;
+      padding: 2rem 1.2rem;
+    }
+    .page {
+      max-width: 820px;
+      margin: 0 auto;
+      background: rgba(255, 252, 247, 0.7);
+      padding: 2.2rem 2rem;
+      border-radius: 24px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+    }
+
+    /* 顶部导航 */
+    .top-nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #ddd9ce;
+      margin-bottom: 2.2rem;
+      flex-wrap: wrap;
+    }
+    .top-nav a {
+      text-decoration: none;
+      color: #4f4a42;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+      border-bottom: 1px solid transparent;
+    }
+    .top-nav a:hover {
+      color: #b4875a;
+      border-bottom-color: #b4875a;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: #3b352e;
+      margin-bottom: 0.5rem;
+    }
+    .subhead {
+      color: #6d6459;
+      font-style: italic;
+      font-size: 0.95rem;
+      margin-bottom: 1.8rem;
+      padding-left: 0.5rem;
+      border-left: 3px solid #d9cfc0;
+    }
+
+    .intro {
+      margin-bottom: 2.5rem;
+    }
+    .intro p {
+      margin-bottom: 1rem;
+    }
+
+    .quote-box {
+      background: #f2ede5;
+      border-left: 5px solid #b4875a;
+      padding: 1.2rem 1.8rem;
+      margin: 1.8rem 0 2.2rem;
+      border-radius: 0 12px 12px 0;
+      font-size: 0.98rem;
+      color: #3f3a32;
+    }
+    .quote-box strong {
+      font-weight: 500;
+      color: #7e6a52;
+    }
+
+    /* 三个场景模块 */
+    .scene-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      margin: 2.5rem 0 2rem;
+    }
+    .scene-card {
+      flex: 1 1 200px;
+      background: #f9f5ed;
+      padding: 1.4rem 1.2rem 1.6rem;
+      border-radius: 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      border: 1px solid #e7e0d5;
+      transition: box-shadow 0.2s;
+    }
+    .scene-card:hover {
+      box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+    }
+    .scene-card h3 {
+      font-weight: 500;
+      font-size: 1.1rem;
+      margin-bottom: 0.7rem;
+      color: #534b3f;
+      border-bottom: 1px dashed #cfc6b8;
+      padding-bottom: 0.4rem;
+    }
+    .scene-card p {
+      font-size: 0.93rem;
+      color: #4c443b;
+    }
+
+    .faq-mini {
+      background: #f6f0e8;
+      padding: 1.6rem 1.8rem;
+      border-radius: 20px;
+      margin: 2.2rem 0 2rem;
+    }
+    .faq-mini h3 {
+      font-weight: 500;
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+      color: #4c4238;
+    }
+    .faq-item {
+      margin-bottom: 0.9rem;
+    }
+    .faq-item strong {
+      display: inline-block;
+      font-weight: 500;
+      color: #7e6a52;
+      margin-right: 0.4rem;
+    }
+    .faq-item span {
+      color: #3f3a32;
+      font-size: 0.96rem;
+    }
+
+    .footnote {
+      margin-top: 2.8rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #ddd6ca;
+      font-size: 0.87rem;
+      color: #6f675c;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .footnote a {
+      color: #7e6a52;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #ccc2b2;
+      font-weight: 400;
+    }
+    .footnote a:hover {
+      color: #b4875a;
+      text-decoration-color: #b4875a;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem 0.8rem;
+      }
+      .page {
+        padding: 1.5rem 1.2rem;
+      }
+      h1 {
+        font-size: 1.7rem;
+      }
+      .scene-grid {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .top-nav {
+        justify-content: flex-start;
+        gap: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <!-- 顶部导航 -->
+  <nav class="top-nav">
+    <a href="#">索引</a>
+    <a href="#">说明</a>
+    <a href="#">场景</a>
+    <a href="#">摘要</a>
+  </nav>
+
+  <h1>资料整理与信息索引</h1>
+  <div class="subhead">从一个结构化的视角看待 1xbet</div>
+
+  <div class="intro">
+    <p>
+      在浏览或梳理某个平台的信息时，分类与索引往往比零散的片段更有用。这里的几段文字并不打算重复罗列已知的条目，而是尝试从资料整理的角度，把一些常见的功能模块和呈现逻辑做一次轻量的归类。如果你对「<a href="https://pages-1xbet.com" style="color:#7e6a52; text-decoration:underline; text-underline-offset:2px;">1xbet</a>」本身已经有一些了解，下面的内容或许可以作为一份简洁的参照框架。
+    </p>
+    <p>
+      整个页面更像是一张便签——记录了几组特征、三个常见的使用情境，以及几条经常被问到的说明。不追求全面，只希望把信息组织得稍微清晰一些。
+    </p>
+  </div>
+
+  <!-- 引用/提示框 -->
+  <div class="quote-box">
+    <strong>提示</strong> — 以下内容基于公开的界面结构与常见功能描述整理，不涉及具体数值或承诺。所有引用均来自可查的通用说明。
+  </div>
+
+  <h2 style="font-weight:400; font-size:1.2rem; margin:2rem 0 0.2rem; color:#4f463b;">三个常见场景模块</h2>
+  <p style="font-size:0.9rem; color:#6d6459; margin-bottom:0.8rem;">从信息索引中提取的三组典型情境</p>
+
+  <div class="scene-grid">
+    <div class="scene-card">
+      <h3>· 资讯与预览</h3>
+      <p>许多用户会先浏览赛事预览、近期活动或数据概览。这个模块通常包含时间线、队伍状态和简短的分析摘要，便于快速判断。</p>
+    </div>
+    <div class="scene-card">
+      <h3>· 功能引导</h3>
+      <p>从账户设置到界面语言切换，再到通知偏好，大部分平台都会提供一组引导性的选项。整理成列表后，查找效率会高很多。</p>
+    </div>
+    <div class="scene-card">
+      <h3>· 记录与回顾</h3>
+      <p>已完成的记录、历史筛选和统计图表构成了第三类场景。这类模块适合在事后做复盘或核对，也是索引中比较稳定的部分。</p>
+    </div>
+  </div>
+
+  <!-- 常见说明 / FAQ 摘要 -->
+  <div class="faq-mini">
+    <h3>常见说明摘要</h3>
+    <div class="faq-item">
+      <strong>Q：</strong><span>这些模块是否始终可见？</span><br>
+      <span style="display:inline-block; padding-left:1.6rem; color:#5c5449;">通常根据登录状态和地区版本有所调整，具体以实际加载为准。</span>
+    </div>
+    <div class="faq-item">
+      <strong>Q：</strong><span>信息更新的频率如何？</span><br>
+      <span style="display:inline-block; padding-left:1.6rem; color:#5c5449;">实时类数据按秒或分刷新，静态页面则随版本迭代更新，无固定周期。</span>
+    </div>
+    <div class="faq-item">
+      <strong>Q：</strong><span>是否支持自定义索引排序？</span><br>
+      <span style="display:inline-block; padding-left:1.6rem; color:#5c5449;">部分板块提供筛选或收藏功能，但全局排序通常由默认逻辑决定。</span>
+    </div>
+    <div style="margin-top:0.8rem; font-size:0.88rem; color:#7b7165;">
+      * 以上说明基于通用界面逻辑整理，不构成操作建议。
+    </div>
+  </div>
+
+  <!-- 底部 -->
+  <div class="footnote">
+    <span>索引页 · 整理于 2025</span>
+    <span>主站：<a href="https://pages-1xbet.com">1xbet</a></span>
+  </div>
+</div>
+</body>
+</html>
