@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>HomeHub FIFA 2026 · 世界杯专注页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f2f7fa;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e2f3a;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 1100px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 36px;
+            box-shadow: 0 12px 30px rgba(0, 40, 50, 0.08);
+            padding: 32px 28px 48px;
+            transition: all 0.2s ease;
+        }
+
+        /* 主视觉区 —— 卡片式 hero */
+        .hero-card {
+            background: linear-gradient(145deg, #e7f3f5 0%, #d4e9ed 100%);
+            border-radius: 28px;
+            padding: 32px 28px;
+            margin-bottom: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            box-shadow: 0 4px 12px rgba(0, 70, 80, 0.04);
+        }
+
+        .hero-text {
+            flex: 1 1 260px;
+        }
+
+        .hero-text h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #0b3b44;
+            margin-bottom: 8px;
+        }
+
+        .hero-text .subhead {
+            font-size: 1.1rem;
+            color: #2a5b66;
+            background: rgba(255, 255, 255, 0.5);
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 40px;
+            backdrop-filter: blur(2px);
+            margin-top: 6px;
+        }
+
+        .hero-badge {
+            background: #ffffffcc;
+            border-radius: 80px;
+            padding: 8px 20px;
+            font-weight: 500;
+            color: #106672;
+            border: 1px solid #b2d7de;
+            font-size: 0.95rem;
+            backdrop-filter: blur(4px);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hero-badge::before {
+            content: "🏆";
+            font-size: 1.1rem;
+        }
+
+        /* 网格卡片区 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin: 32px 0;
+        }
+
+        .info-card {
+            background: #fafdfe;
+            border-radius: 24px;
+            padding: 24px 20px 22px;
+            border: 1px solid #dceef2;
+            box-shadow: 0 2px 10px rgba(22, 80, 90, 0.03);
+            transition: transform 0.15s, box-shadow 0.2s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 60, 70, 0.06);
+            border-color: #aacfd6;
+        }
+
+        .info-card h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #0f4d59;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-card p {
+            color: #2d4952;
+            font-size: 0.98rem;
+        }
+
+        .info-card .dot-accent {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #2f8b9c;
+            border-radius: 20px;
+            margin-right: 6px;
+        }
+
+        /* 适合人群卡片 */
+        .audience-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin: 24px 0 16px;
+        }
+
+        .audience-card {
+            background: #eef6f8;
+            padding: 14px 22px;
+            border-radius: 60px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #134e5a;
+            border: 1px solid #c7dfe4;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: background 0.15s;
+        }
+
+        .audience-card:hover {
+            background: #d5eaef;
+            border-color: #aac6ce;
+        }
+
+        .audience-card::before {
+            content: "●";
+            color: #2d8b9c;
+            font-size: 0.7rem;
+        }
+
+        /* 自然链接段落 */
+        .link-section {
+            background: #eef7fa;
+            border-radius: 24px;
+            padding: 28px 26px;
+            margin: 28px 0 18px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 8px 6px;
+        }
+
+        .link-section p {
+            font-size: 1.05rem;
+            color: #183c44;
+            max-width: 700px;
+        }
+
+        .link-section a {
+            color: #0b6577;
+            background: #d3e9ef;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0 10px 0 8px;
+            border-radius: 40px;
+            transition: background 0.2s, color 0.15s;
+            white-space: nowrap;
+        }
+
+        .link-section a:hover {
+            background: #b2d7e0;
+            color: #043f4b;
+        }
+
+        /* FAQ 摘要卡片 */
+        .faq-mini {
+            background: #ffffff;
+            border: 1px solid #def0f3;
+            border-radius: 22px;
+            padding: 18px 22px;
+            margin: 24px 0 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 6px 14px;
+        }
+
+        .faq-mini summary {
+            font-weight: 550;
+            color: #0e515e;
+            cursor: default;
+            font-size: 1rem;
+            display: inline;
+        }
+
+        .faq-mini p {
+            color: #2c5a64;
+            font-size: 0.95rem;
+            display: inline;
+        }
+
+        .faq-mini .faq-tag {
+            background: #dbeef2;
+            border-radius: 30px;
+            padding: 2px 14px;
+            font-size: 0.8rem;
+            color: #0d515f;
+            font-weight: 500;
+        }
+
+        /* 底部收藏提示 */
+        .save-note {
+            margin-top: 32px;
+            padding-top: 22px;
+            border-top: 1px solid #dae9ed;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .save-note span {
+            color: #1a5b68;
+            background: #e1f0f4;
+            padding: 6px 20px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+        }
+
+        .save-note small {
+            color: #4d727c;
+        }
+
+        /* 响应式 */
+        @media (max-width: 640px) {
+            .page {
+                padding: 20px 16px 36px;
+            }
+            .hero-card {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 24px 20px;
+            }
+            .hero-text h1 {
+                font-size: 1.7rem;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            .link-section {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .faq-mini {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .card-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* 辅助 */
+        .mt-1 { margin-top: 12px; }
+        .mb-1 { margin-bottom: 8px; }
+        .inline-flex { display: inline-flex; align-items: center; }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 主视觉卡片 -->
+    <div class="hero-card">
+        <div class="hero-text">
+            <h1>再次回到世界杯</h1>
+            <div class="subhead">专注 · 收藏 · 持续关注</div>
+        </div>
+        <div class="hero-badge">2026 征程 · 信息中心</div>
+    </div>
+
+    <!-- 用途卡片网格 -->
+    <div class="card-grid">
+        <div class="info-card">
+            <h3><span class="dot-accent"></span> 赛事动线</h3>
+            <p>从分组抽签到淘汰赛脉络，清晰的时间轴与场馆导览，帮助你提前规划看球节奏。不再错过关键轮次。</p>
+        </div>
+        <div class="info-card">
+            <h3><span class="dot-accent"></span> 收藏集</h3>
+            <p>把你关心的球队、比赛、专题整理成个人收藏夹。再次访问时一眼看到上次标记的内容，无需重新搜索。</p>
+        </div>
+        <div class="info-card">
+            <h3><span class="dot-accent"></span> 赛历备忘</h3>
+            <p>基于赛程生成简约提醒，支持同步到本地日历。保持关注，不因时区或忙碌错过任何一场关键对决。</p>
+        </div>
+        <div class="info-card">
+            <h3><span class="dot-accent"></span> 氛围记录</h3>
+            <p>观赛笔记、现场图片、短评聚合，像一本轻量级的世界杯手账。供你随时翻阅属于自己的高光时刻。</p>
+        </div>
+    </div>
+
+    <!-- 适合人群 -->
+    <div style="margin: 6px 0 10px;">
+        <p style="font-weight: 500; color: #11515e;">适合这样的人群</p>
+    </div>
+    <div class="audience-row">
+        <span class="audience-card">再次回来的老球迷</span>
+        <span class="audience-card">想收藏赛程的规划派</span>
+        <span class="audience-card">持续关注动态的跟赛者</span>
+        <span class="audience-card">喜欢整理观赛回忆的记录党</span>
+    </div>
+
+    <!-- 自然链接段落：从再次访问、收藏和持续关注的角度展开，嵌入“世界杯”链接 -->
+    <div class="link-section">
+        <p>
+            如果你之前来过这里，或者正准备把这一页存为书签——这个站点围绕
+            <a href="https://homehub-fifa2026.com">世界杯</a>
+            整理了一份可以反复查看的信息骨架。赛程更新、场地介绍、队伍动向都会持续归拢在同一处，方便你随时回来翻阅。
+        </p>
+        <p style="margin-top: 10px;">
+            无论是想回顾小组形势，还是打算收藏某场比赛的详细数据，把
+            <a href="https://homehub-fifa2026.com">世界杯</a>
+            页面加入浏览器收藏夹之后，每次打开都能看到最新的变化。不用在多个页面之间跳转，这里就是你的集中关注点。
+        </p>
+    </div>
+
+    <!-- FAQ 摘要卡片（自然克制） -->
+    <div class="faq-mini">
+        <summary class="faq-tag">常见关注点</summary>
+        <p>▪ 赛程是否会随官方调整而更新？—— 是的，会跟随主办方公布的信息同步。</p>
+        <p style="margin-left: 4px;">▪ 收藏的内容需要登录吗？—— 使用本地存储，无需注册即可保存偏好。</p>
+    </div>
+
+    <!-- 底部收藏与再次访问提示 -->
+    <div class="save-note">
+        <span>★ 加入收藏夹 · 持续关注</span>
+        <small>再次访问时，上次的记录与标记依然在</small>
+    </div>
+
+    <!-- 隐式说明（不重复，仅点缀） -->
+    <div style="margin-top: 18px; text-align: left; color: #557d87; font-size: 0.85rem; border-left: 4px solid #b7d6de; padding-left: 14px;">
+        页面信息保持整理状态，无夸大引导。你可以随时回来，也可以安静地收藏。
+    </div>
+
+</div>
+</body>
+</html>
